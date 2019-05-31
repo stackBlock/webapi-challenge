@@ -4,8 +4,8 @@ const db = require('../../data/helpers/projectModel.js');
 
 
 router.get('/', async (req, res) => {
-    await db.get().then(users => {
-        res.json({ users })
+    await db.get().then(projects => {
+        res.json({ projects })
     });
 });
 
@@ -15,12 +15,12 @@ router.get('/:id', async (req, res) => {
     });
 });
 
-// router.post('/', (req, res) => {
-//     const { name, bio, created_at, updated_at } = req.body;
-//     db.insert({ name, bio, created_at, updated_at }).then(response => {
-//         res.status(201).json(response);
-//     });
-// });
+router.post('/', (req, res) => {
+    const { name, description, completed } = req.body;
+    db.insert({ name, description, completed }).then(response => {
+        res.status(201).json(response);
+    });
+});
 
 // router.put('/:id', (req, res) => {
 //     const { id } = req.params;
