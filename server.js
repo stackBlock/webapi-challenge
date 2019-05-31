@@ -1,6 +1,6 @@
 const express = require('express'); // importing a CommonJS module
 
-// const apiRoute = require('./routes/api/index.js');
+const apiRoute = require('./routes/api/index.js');
 
 const server = express();
 
@@ -17,6 +17,6 @@ server.get('/', (req, res) => {
     `);
 });
 
-// server.use('/api', apiRoute);
+server.use('/api', apiRoute);
 
 module.exports = server;
