@@ -22,13 +22,13 @@ router.post('/', (req, res) => {
     });
 });
 
-// router.put('/:id', (req, res) => {
-//     const { id } = req.params;
-//     const { name, bio } = req.body;
-//     db.update(id, { name, bio }).then(response => {
-//         res.status(201).json(response)
-//     });
-// });
+router.put('/:id', (req, res) => {
+    const { id } = req.params;
+    const { project_id, description, notes } = req.body;
+    db.update(id, { project_id, description, notes }).then(response => {
+        res.status(201).json(response)
+    });
+});
 
 // router.delete('/:id', (req, res) => {
 //     const id = req.params.id;
