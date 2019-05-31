@@ -26,13 +26,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+1. express in a library. 2) express is very light, you have to add pretty much evreything with middleware
+
 - [ ] Describe Middleware?
+
+Middleware are functions that you are global, local, or created that act on your api
 
 - [ ] Describe a Resource?
 
+In the context of this class, a resource is part of REST's principles. principle 1 - everuthing is a resource, principle 2 - each resource is accessible via a unique URI, and principle 4 - resources can have multiple representations.
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+API's return different codes, 200 being the code for something that worked correctly. there are tons of codes.
+
 - [ ] How can we partition our application into sub-applications?
+
+use a router to make routes. it organizes api's that can easily get out of hand.
 
 ## Project Setup
 
