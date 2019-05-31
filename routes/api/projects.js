@@ -30,11 +30,11 @@ router.put('/:id', (req, res) => {
     });
 });
 
-// router.delete('/:id', (req, res) => {
-//     const id = req.params.id;
-//     db.remove(id).then(response => {
-//         res.status(200).json({ Success: `User ${id} is gone forever from the system!!` })
-//     });
-// });
+router.delete('/:id', (req, res) => {
+    const id = req.params.id;
+    db.remove(id).then(response => {
+        res.status(200).json({ Success: `User ${id} is gone forever from the system!!` })
+    });
+});
 
 module.exports = router;
