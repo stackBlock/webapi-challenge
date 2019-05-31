@@ -9,7 +9,11 @@ router.get('/', async (req, res) => {
     });
 });
 
-
+router.get('/:id', async (req, res) => {
+    await db.get(req.params.id).then(function (data) {
+        res.send(data);
+    });
+});
 
 
 module.exports = router;
